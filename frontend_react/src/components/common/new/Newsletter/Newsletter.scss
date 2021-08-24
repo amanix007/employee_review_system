@@ -1,0 +1,47 @@
+@import '../../../../assets/scss/variables';
+
+.newsletter {
+    background-color: #FAFAFA;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    
+    @media(max-width:576px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .section-content {
+        max-width: 540px;
+        width: 100%;
+        margin-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .newsletter-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .subscribe-btn{
+                margin-left: 2%;
+                align-self: stretch;
+                width: 28%;
+                .submit-btn{
+                    height: 100%;
+                }
+            }
+
+            .subscribe-input{
+                width: 70%;
+            }
+            .MuiButton-root{
+                font-size: rem(20);
+                font-weight: 400;
+                @media(max-width: 575px){
+                    font-size: rem(14);
+                }
+            }
+            .MuiOutlinedInput-notchedOutline {
+                border-color: $primaryColor;
+            }
+        }
+    }
+}

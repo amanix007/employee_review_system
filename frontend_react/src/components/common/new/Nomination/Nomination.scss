@@ -1,0 +1,30 @@
+.nomination-section{
+    background-color: #F5F5F5;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    .section-content{
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        .item{
+            max-width: 300px;
+            width: 100%;
+        }
+
+        .image{
+            background-color: #FAFAFA;
+            border-radius: 8px;
+            padding: 24px 36px;
+        }
+
+        .button-group{
+            margin-top: 42px;
+            @media(max-width: 767px){
+                margin-top: 20px;
+            }
+            a:hover{
+                color: #fff;
+            }
+        }
+    }
+}

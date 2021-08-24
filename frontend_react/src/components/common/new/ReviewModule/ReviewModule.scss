@@ -1,0 +1,92 @@
+@import "../../../../assets/scss/variables";
+
+.review-module{
+    padding: 32px 92px 34px 0;
+    border-bottom: 0.5px solid #E5E5EA;
+    &:last-child{
+        border-bottom: none;
+    }
+    .destination{
+        max-width: 300px;
+        width: 100%;
+        font-weight: 300;
+        font-size: rem(14);
+        line-height: 17px;
+        color: #4C4C4C;
+        white-space: nowrap;
+        margin-bottom: 16px;
+        .line-icon{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            i{
+                transform: rotate(90deg);
+                position: relative;
+                z-index: 2;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background-color: $primaryColor;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 80%;
+                height: 1px;
+                background-color: $primaryColor;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) ;
+            }
+        }
+    }
+    .title{
+        margin-bottom: 25px;
+    }
+    .flight-info{
+        color: #4C4C4C;
+        font-size: rem(12);
+        margin-bottom: 12px;
+        span{
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            @media(max-width: 575px){
+                padding-left: 0;
+                &:after{
+                    display: none;
+                }
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                padding-right: 0;
+                &:after{
+                    display: none;
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 8px;
+                background-color: #c7c7cc;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .ratting {
+        i{
+            color: #FFD321;
+        }
+    }
+}

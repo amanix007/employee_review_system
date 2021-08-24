@@ -1,0 +1,77 @@
+@import "../../../../assets/scss/variables";
+
+.flight-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        .item-inner {
+            .image img{
+                transform: scale(1.07);
+            }
+            .info{
+                .title a{
+                    color: $primaryDarkColor; 
+                }
+            }
+        }
+    }
+    .item-inner {
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        overflow: hidden;
+
+        .image {
+            height: 162px;
+            width: 162px;
+            border-radius: 8px;
+            overflow: hidden;
+            @media(max-width: 575px) {
+                height: 120px;
+                width: 120px;
+            }
+            @media(max-width: 479px) {
+                height: 80px;
+                width: 80px;
+            }
+            img{
+                transform: scale(1);
+                transition: .5s ease-in-out;
+            }
+        }
+        .info {
+            padding: 24px;
+            width: calc(100% - 162px);
+            min-height: 162px;
+            @media(max-width: 575px) {
+                width: calc(100% - 120px);
+                min-height: 120px;
+            }
+            @media(max-width: 479px) {
+                width: calc(100% - 80px);
+                min-height: 80px;
+                padding: 8px 18px;
+            }
+            
+            
+        }
+        .title-area {
+            img {
+                margin-right: 17px;
+                width: 31px;
+            }
+            .title a {
+                color: #000000;
+            }
+        }
+
+        .price-bottom-text{
+            color: #8E8E93;
+        }
+    }
+
+    small {
+        font-size: rem(18);
+        font-weight: 300;
+    }
+}

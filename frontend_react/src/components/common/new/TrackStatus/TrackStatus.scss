@@ -1,0 +1,43 @@
+@import "../../../../assets/scss/variables";
+
+.track-status{
+    padding-top: 35px;
+    // padding-bottom: 35px;
+    
+    .icon-img{
+        width: 60px;
+        height: 60px;
+
+        @media(max-width: 575px){
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    .item{
+        background-color: $white;
+        padding: 24px 32px;
+        border-radius: 8px;
+        height: 100%;
+        @media(max-width: 1200px){
+            padding: 15px;
+        }
+    }
+    .MuiInputBase-root, button{
+        min-height: 40px;
+        @media(max-width: 575px){
+            min-height: 38px;
+        }
+    }
+    .form-button{
+        @media(max-width: 575px){
+            margin-top: 15px;
+        }
+    }
+
+    .MuiButton-containedPrimary:hover{
+        .MuiButton-label{
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../../../assets/scss/variables';
+
+.place-module{
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    height: 100%;
+    &:hover{
+        box-shadow: 0 4px 12px rgba(#000,.15);
+        .title{
+            color: $primaryDarkColor;
+        }
+    }
+    a{
+        color: #000000;
+    }
+
+    &.vertical a{
+        flex-direction: column;
+        .image{
+            width: 100%;
+            height: 150px;
+        }
+        .info{
+            padding: 16px;
+            width: 100%;
+        }
+    }
+
+    .image{
+        height: 68px;
+        width: 68px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .info{
+        padding: 8px 8px 8px 14px;
+        width: calc(100% - 68px);
+    }
+}

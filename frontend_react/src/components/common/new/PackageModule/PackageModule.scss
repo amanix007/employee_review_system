@@ -1,0 +1,149 @@
+@import "../../../../assets/scss/variables";
+
+.package-module {
+    margin-bottom: 2rem;
+    cursor: pointer;
+    &.large {
+        @media (min-width: 768px){
+            position: relative;
+
+            .image-area {
+                &:after {
+                    display: flex;
+                }
+                .flex-img {
+                    height: 45vh;
+                    @media(max-width: 991px){
+                        height: 250px;
+                    }
+                }
+            }
+
+            .info {
+                position: absolute;
+                width: fit-content;
+                bottom: 0;
+                left: 0;
+                padding: 32px;
+                @media (max-width: 374px) {
+                    padding: 15px;
+                }
+                .title {
+                    font-size: rem(36);
+                    font-weight: 500;
+                    color: $white;
+                    line-height: 45px;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+
+                .amount {
+                    color: $white;
+                    font-size: rem(16);
+                    line-height: 24px;
+                    p>span{
+                        font-size: initial;
+                    }
+                }
+                .packages {
+                    p {
+                        color: $white;
+                        font-size: rem(16);
+                        line-height: 24px;
+                        margin-right: 23px;
+                        @media (max-width: 374px) {
+                            margin-right: 20px;
+                        }
+                    }
+                    img {
+                        max-height: fit-content;
+                        height: 22px;
+                        max-width: 22px;
+                        margin-right: 9px;
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .image-area {
+            &:after{
+                // background-color: rgba(0,0,0, .35);
+            }
+            img {
+                transform: scale(1.02);
+            }
+        }
+        .info {
+            .title a {
+                color: $primaryDarkColor;
+            }
+        }
+    }
+    .image-area {
+        overflow: hidden;
+        border-radius: 8px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0, .2);
+            transition: .3s ease-in-out;
+            display: none;
+        }
+        img {
+            transform: scale(1);
+            transition: all 0.7s ease-in-out;
+            width: 100%;
+        }
+
+        .flex-img {
+            height: 300px;
+            @media(max-width: 991px){
+                height: 250px;
+            }
+        }
+    }
+
+    .info {
+        padding: 16px 0;
+        position: relative;
+        z-index: 2;
+        p {
+            margin-bottom: 0;
+        }
+        .packages {
+            margin-bottom: 6px;
+            .icon {
+                max-height: 18px;
+                max-width: 20px;
+                width: auto;
+                height: auto;
+            }
+            p {
+                font-size: rem(13);
+                line-height: 18px;
+                color: $textgray1;
+            }
+        }
+        .title {
+            margin-bottom: 8px;
+            color: $black;
+        }
+        .amount{
+            p>span{
+                font-size: rem(12);
+            }
+
+            strong{
+                font-weight: 500;
+            }
+        }
+    }
+}

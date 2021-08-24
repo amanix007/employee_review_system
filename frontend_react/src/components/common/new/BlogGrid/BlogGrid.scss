@@ -1,0 +1,17 @@
+@import "../../../../assets/scss/variables";
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 4% 2%;
+    @media(max-width: 1024px) {
+        grid-template-columns: 48.25% 48.25%;
+    }
+    @media(max-width: 640px) {
+        grid-template-columns: 100%;
+        grid-gap: 15px;
+    }
+}
+.grid-button-group {
+    margin-top: 32px;
+}

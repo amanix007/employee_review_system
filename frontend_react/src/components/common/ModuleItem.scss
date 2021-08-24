@@ -1,0 +1,143 @@
+@import "../../assets/scss/variables";
+
+.Module-item {
+    // max-width: 382px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    color: #fff;
+    height: 458px;
+
+    &:hover {
+    }
+
+    @media (max-width: 1024px) {
+        height: 340px;
+    }
+
+    > img {
+        border-radius: 3px 3px 0px 0px;
+    }
+
+    .overlay {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(#000 0%, rgba(0, 0, 0, 0.16) 28.08%, rgba(0, 0, 0, 0.16) 70.44%, #000 100%);
+        opacity: 0.8;
+    }
+
+    .text {
+        border: 1px solid #dadbe6;
+        border-top: 0px;
+        border-radius: 0px 0px 3px 3px;
+        padding: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        .top {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            padding: 16px;
+            text-align: right;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    margin-left: 16px;
+
+                    &:first-child {
+                        margin-right: auto;
+                        margin-left: 0;
+                    }
+
+                    span {
+                        font-weight: 600;
+                        @media (max-width: 575px) {
+                            font-weight: 500;
+                            font-size: rem(14);
+                        }
+                    }
+
+                    img {
+                        margin-right: 6px;
+                        width: 24px;
+                        @media (max-width: 575px) {
+                            width: 12px;
+                        }
+                    }
+                    .mdi {
+                        font-size: rem(18);
+                        margin-right: 4px;
+                        @media (max-width: 575px) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 16px;
+
+            > span {
+                font-size: rem(12);
+            }
+
+            h4 {
+                color: inherit;
+                margin-top: 2px;
+                margin-bottom: 8px;
+
+                small {
+                    font-size: rem(12);
+                }
+            }
+            h5 {
+                // vertical-align: middle;
+                align-items: center;
+                display: flex;
+
+                del {
+                    font-size: rem(16);
+                    margin-right: 4px;
+                }
+                .percent{
+                    font-size: rem(10);
+                    background-color: $orangeNew;
+                    border-radius: 10px;
+                    padding: 3px;
+                    display: inline-block;
+                    margin-left: 4px;
+                    font-weight: 500;
+                }
+            }
+            p {
+                font-weight: 600;
+                margin: 0;
+                line-height: 1.4;
+            }
+        }
+    }
+}

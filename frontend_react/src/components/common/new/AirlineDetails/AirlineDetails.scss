@@ -1,0 +1,42 @@
+@import "../../../../assets/scss/variables";
+
+.about-flight{
+    // padding-top: 70px;
+    .section-content{
+        padding: 48px;
+        background-color: $white;
+        border-radius: 8px;
+
+        @media (max-width: 575px){
+            padding: 20px;
+        }
+        .list{
+            margin-bottom: 40px;
+            @media (max-width: 575px){
+                margin-bottom: 20px;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .title{
+                margin-bottom: 24px;
+                @media (max-width: 575px){
+                    margin-bottom: 15px;
+                }
+            }
+            ul{
+                li{
+                    padding-left: 15px;
+                    position: relative;
+                    &:before {
+                        content: "•";
+                        color: #8E8E93;
+                        position: absolute;
+                        left: 0;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
+}

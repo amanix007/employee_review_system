@@ -1,0 +1,98 @@
+@import "../../../../assets/scss/variables";
+
+$cardHeight: 160px;
+$cardHeightResMd: 120px;
+$cardHeightRes: 100px;
+
+
+.card-slider{
+    .close-btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 9;
+        padding: 8px;
+        border-radius: 4px;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            background-color: #fafafa;
+        }
+    }
+    &.noBg{
+        .item-inner{
+            .image img{
+                transform: none !important;
+                filter: none !important;
+            }
+            &:hover{
+                .image img{
+                    transform: none;
+                    filter: none;
+                }
+            }
+        }
+    }
+    .slider-item{
+        padding: 15px;
+    }
+    .item-inner{
+        background-color: $white; 
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        height: $cardHeight;
+        
+        @media(max-width: 991px){
+            height: $cardHeightResMd;
+        }
+        @media(max-width: 767px){
+            height: $cardHeightRes;
+        }
+        &:hover{
+            .image img{
+                transform: scale(1.04);
+                filter: brightness(.7);
+            }
+            .title{
+                color: $primaryDarkColor;
+            }
+        }
+        .image{
+            max-width: 128px;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            height: $cardHeight;
+            @media(max-width: 991px){
+                height: $cardHeightResMd;
+            }
+            @media(max-width: 767px){
+                height: $cardHeightRes;
+            }
+            @media(max-width: 375px){
+                max-width: 85px;
+            }
+            img{
+                transition: all .4s ease-in-out;
+                filter: brightness(1);
+            }
+        }
+        
+        .title{
+            color: $black;
+            @media(max-width: 767px){
+                font-size: rem(18);
+            }
+            @media(max-width: 767px){
+                font-size: rem(18);
+            }
+        }
+    }
+
+    .slick-dots{
+        right: 25px;
+        width: auto;
+        bottom: 20px;
+    }
+}     

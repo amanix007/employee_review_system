@@ -1,0 +1,135 @@
+@import "../../../../assets/scss/variables";
+
+$muteColor: #4C4C4C;
+$green: #43A046;
+
+.package-item {
+    margin: 0 15px;
+    &:hover{
+        .image-area .image img {
+            transform: scale(1.06);
+        }
+
+        .title a{
+            color: $primaryDarkColor;
+        }
+    }
+
+    .mdi{
+        color: #4c4c4c;
+    }
+
+    .image-area {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        .image {
+            display: flex;
+            height: 320px;
+
+            @media(max-width: 991px){
+                height: 250px;
+            }
+            img {
+                object-fit: cover;
+                object-position: center;
+                transform: scale(1);
+                transition: all 0.4s ease-in-out;
+                width: 100%;
+            }
+        }
+        .taglines {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+            // @media (max-width: 480px) {
+            //     .d-flex{
+            //         img{
+            //             display: none;
+            //         }
+            //     }
+            // }
+        }
+    }
+
+    .primary-tag {
+        padding: 5px 6px;
+        background: linear-gradient(180deg, #1782FA 0%, #253EB8 100%);
+        border-radius: 4px;
+        color: $white;
+    }
+
+    .title {
+        margin-top: 16px;
+        line-height: 24px;
+        a {
+            color: $black;
+            font-weight: 400;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+    .visa {
+        margin-top: 8px;
+        color: $muteColor;
+        .items {
+            text-transform: uppercase;
+            font-size: rem(12);
+            line-height: 18px;
+            color: $muteColor;
+        }
+    }
+    .tour-info {
+        margin-top: 3px;
+        color: #4c4c4c;
+        .mdi {
+            font-size: rem(22);
+        }
+        .loacation {
+            max-width: calc(100% - 80px);
+            width: 100%;
+            .mdi {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 3.33px;
+                    height: 1.39px;
+                    border-radius: 50%;
+                    background-color: #4C4C4C;
+                    bottom: 7px;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+            }
+
+        }
+    }
+
+    .costs {
+        margin-top: 6px;
+        .line-through {
+            text-decoration-line: line-through;
+            color: $muteColor;
+        }
+    }
+
+    .rattings {
+        margin-right: 17.73px;
+    }
+
+    .likes {
+        background-color: $green;
+        border-radius: 12px;
+        color: $white;
+        font-size: rem(14);
+        line-height: 18px;
+        padding: 1px 8px 0;
+        i {
+            margin-right: 5.16px;
+        }
+    }
+}

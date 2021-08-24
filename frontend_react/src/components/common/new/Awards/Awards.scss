@@ -1,0 +1,33 @@
+.award-section{
+    background-color: #EFEFF4;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    @media(max-width: 575px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .section-content{
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        @media(max-width: 480px){ 
+            margin-top: 25px;
+        }
+
+        .image{
+            border-radius: 8px;
+            padding: 0;
+            max-width: 275px;
+            width: 100%;
+            margin: 0 15px;
+            
+            @media(max-width: 575px){ 
+                margin: 0 8px;
+            }
+            img{
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.textarea-content{
+        padding: 48px;
+        padding-top: 8px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+
+        @media(max-width: 575px){
+            padding: 20px;
+        }
+        h4,h2,h3{
+            margin-top: 40px;
+            font-weight: 600;
+        }
+        p{
+            margin-top: 24px;
+            margin-bottom: 0px;
+        }
+        ul{
+            margin-top: 24px;
+            li{
+                padding-left: 15px;
+                position: relative;
+                &:before {
+                    content: "•";
+                    color: #8E8E93;
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                }
+            }
+        }
+}

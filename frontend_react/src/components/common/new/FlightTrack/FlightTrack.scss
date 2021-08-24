@@ -1,0 +1,107 @@
+@import "../../../../assets/scss/variables";
+.flight-module{
+    .st-mb-12{
+        margin-bottom: 12px;
+    }
+    .st-mb-20{
+        margin-bottom: 20px;
+    }
+    .st-mb-8{
+        margin-bottom: 8px;
+    }
+    .st-mb-4{
+        margin-bottom: 4px;
+    }
+    .c-color-light{
+        color: #4C4C4C;
+    }
+    .c-color-primary-dark{
+        color: #235FD8;
+    }
+    .c-color-primary{
+        color: #1882FF;
+    }
+    .c-icon{
+        width: 32px;
+        margin-right: 8px;
+        &.sm{
+            width: 24px;
+        }
+    }
+   
+}
+
+.icon-input-flight{
+	position: relative;
+
+	.MuiFilledInput-underline{
+		&:after, &:before{
+			display: none;
+		}
+	}
+	.MuiInputLabel-formControl{
+		left: 38px;
+	}
+
+
+	.MuiInputLabel-root{
+		color: #000 !important;
+	}
+	.MuiFilledInput-root{
+		background-color: #fff !important;
+	}
+
+
+	.icon{
+		width: 16px;
+		position: absolute;
+		top: 50%;
+		left: 18px;
+		transform: translateY(-50%);
+		z-index: 99;
+		color: $primaryColor;
+	}
+
+	.SingleDatePickerInput, .MuiFormControl-root{
+		min-height: 58px;
+		border: 1px solid #C7C7CC;
+		overflow: hidden;
+		border-radius: 4px;
+		background-color: #FFFFFF;
+		padding-left: 38px;
+		display: flex;
+	}
+
+	.SingleDatePicker{
+		width: 100%;
+		.SingleDatePickerInput{
+			width: 100%;
+		}
+		.DateInput{
+			width: 100%;
+			display: flex;
+			padding-top: 14px;
+			input{
+				border-bottom: none;
+				color: #000;
+			}
+		}
+		.DateInput_input{
+			font-size: rem(14);
+		}
+	}
+
+	.single-date-picker{
+		position: relative;
+		.label{
+			position: absolute;
+			top: 8px;
+			left: 50px;
+			z-index: 99;
+			font-size: rem(12);
+			color: #4c4c4c;
+		}
+    }
+}
+
+

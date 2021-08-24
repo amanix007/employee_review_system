@@ -1,0 +1,323 @@
+@import "../../assets/scss/variables";
+
+.tab-HotelSearchBar {
+  display: flex;
+  align-items: stretch;
+
+  @media (max-width: 480px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .text {
+    background-color: #000000;
+    padding: 8px 15px;
+    flex-grow: 1;
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    p:first-child {
+      font-size: 14px;
+    }
+
+    p:last-child {
+      font-size: 12px;
+      color: #b3b3b3;
+    }
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 48px;
+    background-color: $primaryColor;
+
+    i {
+      color: #ffffff;
+      font-size: 20px;
+    }
+  }
+}
+
+.HotelSearchTopTablet {
+  .list {
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    text-align: center;
+    margin-bottom: 16px;
+
+    @media (max-width: 480px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    li {
+      border-left: 1px solid #efefef;
+      color: #414042;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      padding: 3px 0;
+      font-weight: bold;
+
+      &:first-child,
+      &:last-child {
+        display: none;
+      }
+
+      .mdi {
+        color: inherit;
+        font-size: 20px;
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        border-right: 1px solid #efefef;
+      }
+    }
+  }
+}
+
+.hotel-modal {
+  // margin-top: 0;
+  // margin-right: 15px;
+  margin-bottom: 0;
+  border-radius: 6px;
+
+  @media (max-width: 575px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-content {
+    border: 0;
+
+    @media (max-width: 991px) {
+      // overflow: hidden;
+
+      .ServiceSearchUpdateComponent {
+        margin-bottom: 0;
+
+        &:before {
+          display: none;
+        }
+
+        .collapse,
+        .collapsed {
+          margin: 0 -15px !important;
+        }
+
+        .Service-search-form-wrapper {
+        }
+
+        .Service-search-form {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        .service-main {
+          padding: 0;
+          padding-right: 0px;
+
+          .service-fields-row {
+            flex-direction: column;
+
+            .icon-input-block {
+              width: 100%;
+              flex-basis: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    padding: 0px 15px;
+    color: #000000;
+    background-color: #f5f6f8;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+
+    .left {
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      .mdi {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+    }
+
+    .right {
+      .mdi {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &.modal-HotelSearchBar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    max-width: 700px !important;
+    margin: 25px auto !important;
+
+    @media(max-width : 767px){
+      max-width: 90vw !important;
+    }
+
+    .modal-content {
+      .hotel-search-bar {
+        background-color: #000000;
+        padding: 32px;
+        margin: 0 -15px;
+
+        .hotel-search-bar-form {
+          display: block;
+
+          > div {
+            margin: 0;
+            margin-bottom: 8px;
+
+            @media (max-width: 767px) {
+              input,
+              p {
+                font-size: 15px !important;
+              }
+            }
+          }
+
+          .btn {
+            width: 100%;
+          }
+
+          .DateInput:first-child {
+            max-width: 100% !important;
+
+            &:before {
+              left: auto !important;
+              top: 4px !important;
+              right: 6% !important;
+              font-size: 20px !important;
+            }
+          }
+
+          .tourist-cout .wrapper .btn p {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .closeButton {
+      background-color: #000000;
+      text-align: right;
+      padding-top: 10px;
+      margin: 0 -15px;
+      padding-right: 15px;
+      @media (max-width: 991px) {
+        margin: 0;
+      }
+
+      .mdi {
+        color: #fff;
+        font-size: 24px;
+        padding: 15px 10px;
+      }
+    }
+
+    .searched-parameters {
+      button {
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.modal-HotelFilterComponent {
+    @media(max-width: 575px){
+      max-width: 90vw !important;
+      margin: 25px auto !important;
+    }
+    .title {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: "\F140";
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        font-size: 24px;
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        display: none;
+      }
+
+      &.open {
+        &:before {
+          content: "\F143";
+        }
+      }
+    }
+  }
+
+  // &.modal-HotelSorting {
+  //   display: flex;
+  //   height: 100%;
+  //   align-items: center;
+
+  //   .hotel-sorting {
+  //     padding: 10px;
+  //     margin-bottom: 10px;
+  //     border: 0;
+  //     justify-content: center;
+  //     flex-wrap: wrap;
+
+  //     .item:not(.item-filter) {
+  //       display: none;
+  //     }
+
+  //     .item-filter.item {
+  //       display: block;
+  //       background-color: #fff;
+  //       color: #000000;
+  //       padding: 6px 0;
+  //       padding-left: 30px;
+  //       text-transform: uppercase;
+
+  //       &:before {
+  //         content: "\F130";
+  //         right: auto;
+  //         left: 9px;
+  //         top: 2px;
+  //         font-size: 20px;
+  //       }
+
+  //       &.active {
+  //         &:before {
+  //           content: "\F12F";
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
